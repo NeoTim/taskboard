@@ -1,0 +1,36 @@
+.settings
+  z-index 1050
+  position fixed
+  top 120px
+  right -240px
+  width 240px
+  transition all 200ms
+  -webkit-transition all 200ms
+
+
+
+.settings.active
+  right -1px
+
+
+.settings > .btn
+  background $info !important
+  border-right-width 0
+
+  border-color $white
+  position absolute
+  left -42px
+  top -10px
+  padding 10px 15px
+
+  > i
+    color white
+
+.settings .i-checks span b
+  width 50%
+  height 20px
+  display inline-block
+  float left
+
+.settings .i-checks span b.header
+  height 10px

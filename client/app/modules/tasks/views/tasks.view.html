@@ -1,0 +1,38 @@
+<div class="flex-row">
+  <div class="bg-light lter b-b wrapper-md flex-md">
+      <h1 class="m-l-md font-thin h3">Tasks
+      </h1>
+    </div>
+</div>
+<div class="flex-row">
+  <ox-card>
+
+  </ox-card>
+</div>
+<div class="container top">
+  <div class="row">
+    <section class="col-md-12 panel">
+      <div class="row">
+        <h1 class="panel-heading color-blue-400" text-white>
+          Tasks
+          <a
+             class="btn btn-clear pull-right"
+             ui-sref="tasks-create"
+             y-icon='plus'></a>
+        </h1>
+        <ul class="list-group">
+          <li
+              ng-repeat="task in vm.tasks"
+              ui-sref="tasks-detail({taskId: task._id})"
+              point
+              class="list-group-item">
+              <p>
+                {{task.title}}
+              </p>
+
+          </li>
+        </ul>
+        </div>
+    </section>
+  </div>
+</div>

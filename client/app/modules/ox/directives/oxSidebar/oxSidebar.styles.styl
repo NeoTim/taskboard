@@ -1,0 +1,85 @@
+
+.ox-sidebar
+
+  width $ox-aside-width
+  max-width: $ox-aside-width
+  height 100%
+  width 100%
+
+  background palette('White')
+
+  box-shadow 2px 0 4px rgba(0,0,0,.3)
+  -webkit-box-shadow 2px 0 4px rgba(0,0,0,.3)
+
+  z-index 2009
+  // &.ox-toolbar-fixed
+  //   position fixed
+  //   height 100%
+  //   margin-top $toolbar-height
+  //   top 0
+  //   left 0
+  //   &.on-top
+  //     margin-top 0
+
+  &.on-top
+    z-index 2009
+
+
+  &.on-bottom
+    z-index 1999
+    margin-top $toolbar-height
+    box-shadow inset -2px 0 4px rgba(0,0,0,.3)
+    -webkit-box-shadow inset -2px 0 4px rgba(0,0,0,.3)
+
+  ul
+    text-align left
+    list-style none
+    margin 0
+    padding 0
+
+    > li a
+
+      width 100%
+      text-decoration none
+      display block
+      padding 10px 0px 10px 40px
+      color $lighterbg-text
+      font-weight bold
+      .aside-icon,
+      .aside-text
+        display inline-block
+        transition all 300ms ease-in-out
+        -webkit-transition all 300ms ease-in-out
+
+      .aside-icon
+        margin-right 12px
+
+      &:hover,
+      &:active,
+      &:focus,
+      &:visited,
+      &.active
+        color $lighterbg-text
+        background-color $lightgrey
+
+
+
+  &.folded
+
+    width $ox-aside-width-folded
+
+    .y-side-toolbar.title
+      display none
+    .side-lock,
+    .side-lock i
+      height 60px !important
+
+
+    ul > li > a
+      padding 10px 0
+      text-align center
+      .aside-icon
+        font-size 1.4em
+        margin 0
+      .aside-text
+        display none

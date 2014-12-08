@@ -1,0 +1,111 @@
+.y-divider
+  height 1px
+  float left
+  width 100%
+  background-color $light-grey
+
+  &.y-divider-md
+    height 8px
+
+  &.y-divider-large
+    height 24px
+
+
+.y-card
+  margin 0
+  padding 0
+  position relative
+  height 100%
+
+  &.filled
+    background-color white
+    shadow-z-2();
+
+
+
+  .y-card-header
+    position relative
+    float left
+    width 100%
+    height 64px
+    padding-left 80px
+    // margin-bottom 64px
+
+
+    .y-card-heading
+      float left
+      font-size 2em
+      line-height 64px
+
+    .y-panel-header-actions
+      float right
+
+    &.large
+      position relative
+      float left
+      height 140px
+      padding-left 56px
+
+      .y-card-heading
+        font-size 3em
+        line-height 140px
+
+  .y-card-toolbar
+    width 100%
+    position relative
+    // clear both
+    padding 0 16px
+    float left
+
+    .y-tool
+      padding 0
+
+    .y-card-toolbar-right
+      float right
+      clear both
+      .y-tool
+        padding-left 10px
+
+  .y-card-content
+    float left
+    width 100%
+    padding 0 24px
+
+
+  .y-list,
+  ul.y-list
+    position relative
+    // top 64px
+    margin 0
+
+    .y-item
+      // border-bottom 1px solid #eee
+      // padding-left 32px
+
+      .y-item-action
+        float left
+        width 40px
+        font-size 2em
+        padding-top 10px
+
+      .y-item-text
+        float left
+        padding-top 10px
+        font-size 18px
+        line-height 2em
+
+// .y-list-group
+
+//   width 100%
+//   float left
+
+//   .action
+//     float left
+//     width 56px
+//     padding-top 15px
+//     font-size 1.5em
+
+//   .items
+//     width calc(100% - 56px)
+//     float left
+

@@ -1,0 +1,36 @@
+<div gridster-item="vm.config.map" class="panel y-portlet" ripl>
+  <span ng-if="arrow" class="arrow left pull-up"></span>
+
+  <div class="panel-heading" style="padding:3px;">
+    <y-flex>
+      <div class="f-xs-8 m-b-md">
+    <!-- border:none; outline:none; -->
+        <input autofocus="true" style="width:100%; border:none; outline:none; padding:7px;" ng-model='title' />
+      </div>
+      <div class="tools f-xs-4">
+        <div class="btn-group dropdown dropleft" style="padding-right:10px; padding-top:8px;">
+          <button class="btn no-shadow btn-xs btn-white lt"><i class="fa fa-plus"></i></button>
+          <button class="btn no-shadow btn-xs btn-white lt dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
+          <!-- <ul class="dropdown-menu">
+            <li><a href>Action</a></li>
+            <li><a href>Another action</a></li>
+            <li><a href>Something else here</a></li>
+            <li class="divider"></li>
+            <li><a ng-click="vm.deleteBlock($index)" href> <i class="fa fa-trash-o"></i> </a></li>
+          </ul> -->
+        </div>
+
+      </div>
+    </y-flex>
+  </div>
+
+    <div ng-transclude>
+    </div>
+</div>
+  <!-- <div <center></center>lass="panel-footer">
+    <div class="action">
+      <button
+        class="btn btn-rounded shadow btm-lg btn-icon btn-warning lt">
+        <i class="fa fa-plus"></i></button>
+    </div>
+  </div> -->

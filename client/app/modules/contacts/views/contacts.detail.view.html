@@ -1,0 +1,68 @@
+<div class="wrapper-sm b-b">
+  <div class="m-t-n-xxs m-b-n-xxs m-l-xs">
+    <a class="btn btn-xs btn-white text-indigo pull-right" ng-hide="!vm.contact" ng-click="deleteItem(vm.contact)"><i class="fa fa-times"></i></a>
+    <a class="btn btn-xs btn-white text-indigo" ng-hide="vm.contact.editing" ng-click="vm.contact.editing = true">Edit</a>
+    <a class="btn btn-xs btn-white text-indigo" ng-show="vm.contact.editing" ng-click="vm.contact.editing = false; vm.contact.save();">Done</a>
+  </div>
+</div>
+
+<div class="row-row">
+  <div class="cell">
+    <div class="cell-inner">
+
+      <div class="hbox h-auto m-b-lg">
+        <div class="col text-center w-sm">
+          <div class="thumb-lg avatar inline">
+            <img ng-src="{{vm.contact.avatar}}" ng-show="vm.contact.avatar">
+          </div>
+        </div>
+        <div class="col v-middle h1 font-thin">
+          <div ng-hide="vm.contact.editing">{{vm.contact.first}} {{vm.contact.last}}</div>
+          <div ng-show="vm.contact.editing">
+            <input type="text" placeholder="First" class="form-control w-auto input-lg m-b-n-xxs font-bold" ng-model="vm.contact.first" >
+            <input type="text" placeholder="Last" class="form-control w-auto input-lg font-bold" ng-model="vm.contact.last" >
+          </div>
+        </div>
+      </div>
+      <!-- fields -->
+      <div class="">
+        <div class="form-group m-b-sm" ng-hide="!vm.contact.mobile && !vm.contact.editing">
+          <label class="col-sm-3 control-label">Mobile</label>
+          <div class="col-sm-9">
+            <p class="form-control-static" ng-hide="vm.contact.editing">{{vm.contact.mobile}}</p>
+            <input type="text" class="form-control" ng-show="vm.contact.editing" ng-model="vm.contact.mobile" >
+          </div>
+        </div>
+        <div class="form-group m-b-sm" ng-hide="!vm.contact.home && !vm.contact.editing">
+          <label class="col-sm-3 control-label">Home</label>
+          <div class="col-sm-9">
+            <p class="form-control-static" ng-hide="vm.contact.editing">{{vm.contact.home}}</p>
+            <input type="text" class="form-control" ng-show="vm.contact.editing" ng-model="vm.contact.home" >
+          </div>
+        </div>
+        <div class="form-group m-b-sm" ng-hide="!vm.contact.work && !vm.contact.editing">
+          <label class="col-sm-3 control-label">Work</label>
+          <div class="col-sm-9">
+            <p class="form-control-static" ng-hide="vm.contact.editing">{{vm.contact.work}}</p>
+            <input type="text" class="form-control" ng-show="vm.contact.editing" ng-model="vm.contact.work" >
+          </div>
+        </div>
+        <div class="form-group m-b-sm" ng-hide="!vm.contact.company && !vm.contact.editing">
+          <label class="col-sm-3 control-label">Company</label>
+          <div class="col-sm-9">
+            <p class="form-control-static" ng-hide="vm.contact.editing">{{vm.contact.company}}</p>
+            <input type="text" class="form-control" ng-show="vm.contact.editing" ng-model="vm.contact.company" >
+          </div>
+        </div>
+        <div class="form-group m-b-sm" ng-hide="!vm.contact.note && !vm.contact.editing">
+          <label class="col-sm-3 control-label">Note</label>
+          <div class="col-sm-9">
+            <p class="form-control-static" ng-hide="vm.contact.editing">{{vm.contact.note}}</p>
+            <textarea class="form-control" ng-show="vm.contact.editing" ng-model="vm.contact.note" rows="5"></textarea>
+          </div>
+        </div>
+      </div>
+      <!-- / fields -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+  <div class="flex-row">
+    <div class="bg-light lter b-b wrapper-md flex-md">
+      <h1 class="m-n font-thin h3">Portlet
+
+      </h1>
+    </div>
+  </div>
+  <!-- <div gridster="gridsterOpts">
+      <ul>
+          <li gridster-item="item" ng-repeat="item in items" class="bg-white box-shadow-1">
+            {{item.title}}
+
+            <i class="fa fa-plus frm"></i>
+            <i ng-if="$first" class="fa fa-plus flm"></i>
+          </li>
+      </ul>
+  </div> -->
+  <div class="flex-row">
+    <div class="flex-md">
+      <div gridster="gridsterOpts">
+          <ul>
+              <y-portlet ng-repeat="item in customItems track by $index" title="{{item.title}}">
+                  <!-- <y-portlet title="{{item.title}}"></y-portlet> -->
+              </y-portlet>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+<!--   <button
+    class="fixed-r-b btn btn-rounded shadow btn-xl btn-icon btn-info lt m-r-xl m-t-xl"
+    y-toggle-button-sheet ripl>
+  <i class="fa fa-plus"></i></button> -->

@@ -1,0 +1,106 @@
+.y-side-nav
+  // size 100%
+  width $application-aside-width
+
+  // box-shadow 2px 0 4px rgba(0,0,0,.3)
+  // -webkit-box-shadow 2px 0 4px rgba(0,0,0,.3)
+
+  // overflow-x hidden
+
+  // &.on-bottom
+
+  &.on-top
+    z-index 40009
+
+  .y-side-toolbar
+    height $application-header-height
+    width 100%
+    font-weight bold
+    text-align center
+    font-size 1.6em
+    line-height $application-header-height
+
+  ul
+    list-style none
+    margin 0
+    padding 0
+
+    > li a
+
+      width 100%
+      text-decoration none
+      display block
+      padding 10px 0px 10px 40px
+      color $lighterbg-text
+      font-weight bold
+      .aside-icon,
+      .aside-text
+        display inline-block
+        transition all 300ms ease-in-out
+        -webkit-transition all 300ms ease-in-out
+
+      .aside-icon
+        margin-right 12px
+
+      &:hover,
+      &:active,
+      &:focus,
+      &:visited,
+      &.active
+        color $lighterbg-text
+        background-color $lightgrey
+
+
+
+  &.folded
+
+    width $application-aside-fold-width
+
+    .y-side-toolbar.title
+      display none
+    .side-lock,
+    .side-lock i
+      height 60px !important
+
+
+    ul > li > a
+      padding 10px 0
+      text-align center
+      .aside-icon
+        font-size 1.4em
+        margin 0
+      .aside-text
+        display none
+
+
+
+// .y-side-header
+//   height 80px
+//   width 100%
+
+
+.y-overlay
+  z-index 4010
+  display none
+  top 0
+  width 100%
+  height 100%
+  position fixed
+  background-color rgba(0,0,0,.3)
+  transition display 400ms ease-in-out 0
+  -webkit-transition display 400ms ease-in-out 0
+
+#app
+  // &.y-closed
+  //   .y-overlay
+  //     display none
+  //   .y-side-nav
+  //     left -258px
+
+  &.nav-left-fold
+    .y-overlay
+      display block
+    // .y-side-nav
+    //   left -258px
+
+

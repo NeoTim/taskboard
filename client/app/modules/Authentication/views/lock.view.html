@@ -1,0 +1,17 @@
+<div class="modal-over bg-black">
+  <div class="modal-center animated fadeInUp text-center" style="width:200px;margin:-100px 0 0 -100px;">
+    <div class="thumb-lg">
+      <img src="img/a0.jpg" class="img-circle">
+    </div>
+    <p ng-if="vm.user.firstName" class="h4 m-t m-b">{{vm.user.firstName}} {{vm.user.lastName}}</p>
+    <p ng-if="!vm.user.firstName" class="h4 m-t m-b">{{vm.user.email}}</p>
+    <form ng-submit="vm.login(form)">
+    <div class="input-group">
+      <input type="password" class="form-control text-sm btn-rounded no-border" ng-model="vm.user.password" placeholder="Enter pwd to continue">
+      <span class="input-group-btn">
+        <a href="#/" class="btn btn-success btn-rounded no-border"><i class="fa fa-arrow-right"></i></a>
+      </span>
+    </div>
+    </form>
+  </div>
+</div>

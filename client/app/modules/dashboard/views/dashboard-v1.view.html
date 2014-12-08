@@ -1,0 +1,35 @@
+
+
+
+
+<div class="flex-row">
+  <div class="bg-light lter b-b wrapper-md flex-xs"
+     data-ng-include="'app/modules/dashboard/views/dashboard-v1.header.html'">
+  </div>
+</div>
+<div class="flex-row wrapper">
+  <div class="flex-md" ng-controller="FlotChartDemoCtrl">
+
+    <div class="flex-row">
+      <div class="flex-md"
+           data-ng-include="'app/modules/dashboard/widgets/stats.html'">
+      </div>
+
+      <div class="flex-md"
+           data-ng-include="'app/modules/dashboard/widgets/campaign-chart.html'">
+      </div>
+    </div>
+    <div class="flex-row"
+         data-ng-include="'app/modules/dashboard/widgets/services.html'">
+    </div>
+
+    <div class="flex-row panel wrapper"
+         data-ng-include="'app/modules/dashboard/widgets/tasks.html'">
+    </div>
+    <div class="flex-row"
+         data-ng-include="'app/modules/dashboard/widgets/team.tasks.html'">
+    </div>
+  </div>
+
+</div>
+

@@ -1,0 +1,24 @@
+<div class="list-group no-radius no-border no-bg m-b-none">
+  <a class="list-group-item b-b"
+     ng-class="{'focus': (filter == '')}"
+     ui-sref="app.contacts.list({groupId:1})">ALL Contacts</a>
+
+  <a ng-repeat="item in vm.groups"
+     ng-dblclick="vm.editItem(item)"
+     class="list-group-item m-l hover-anchor b-a no-select"
+     ng-class="{'focus m-l-none': item.selected}"
+     ui-sref="app.contacts.list({groupId:item._id})">
+
+    <span ng-click='deleteGroup(item)'
+          class="pull-right text-muted hover-action"><i class="fa fa-times"></i></span>
+    <span class="block m-l-n"
+          ng-class="{'m-n': item.selected }">{{ item.name ? item.name : 'Untitled' }}</span>
+    <input type="text"
+           class="form-control pos-abt"
+           ng-show="item.editing"
+           ng-blur="item.editing=false; item.save()"
+           ng-model="item.name"
+           style="top:3px;left:2px;width:98%"
+           ui-focus="item.editing">
+  </a>
+</div>

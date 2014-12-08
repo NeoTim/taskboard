@@ -1,0 +1,60 @@
+<ox-card color="white" class="b-a">
+
+  <div class="panel-heading no-border bg-primary">
+
+    <span class="text-lt">The Restaurant</span>
+  </div>
+  <div class="item m-l-n-xxs m-r-n-xxs">
+    <div ng-init="x = 3" class="top text-right padder m-t-xs w-full">
+      <rating ng-model="x" max="5" state-on="'fa fa-star text-white'" state-off="'fa fa-star-o text-white'"></rating>
+    </div>
+    <div class="center text-center w-full" style="margin-top:-60px">
+      <div ui-jq="easyPieChart" ui-refresh="x" ui-options="{
+          percent: {{x*15}},
+          lineWidth: 60,
+          trackColor: 'rgba(255,255,255,0)',
+          barColor: 'rgba(35,183,229,0.7)',
+          scaleColor: false,
+          size: 120,
+          lineCap: 'butt',
+          rotate: 0,
+          animate: 1000
+        }" class="inline">
+      </div>
+    </div>
+    <div class="bottom wrapper bg-gd-dk text-white">
+      <div class="text-u-c h3 m-b-sm text-primary-lter">Coffee</div>
+      <div>Restaurant</div>
+      <div>9:00 am - 12:00 pm</div>
+    </div>
+    <img src="img/c0.jpg" class="img-full">
+  </div>
+  <div class="hbox text-center b-b b-light text-sm">
+    <a href class="col padder-v text-muted b-r b-light">
+      <i class="icon-call-end block m-b-xs fa-2x"></i>
+      <span>Call</span>
+    </a>
+    <a href class="col padder-v text-muted b-r b-light">
+      <i class="icon-pointer block m-b-xs fa-2x"></i>
+      <span>Location</span>
+    </a>
+    <a href class="col padder-v text-muted">
+      <i class="icon-cursor block m-b-xs fa-2x"></i>
+      <span>Direction</span>
+    </a>
+  </div>
+  <div class="hbox text-center text-sm">
+    <a href class="col padder-v text-muted b-r b-light">
+      <i class="icon-plus block m-b-xs fa-2x"></i>
+      <span>Add a tip</span>
+    </a>
+    <a href class="col padder-v text-muted b-r b-light">
+      <i class="icon-like block m-b-xs fa-2x"></i>
+      <span>Like it</span>
+    </a>
+    <a href class="col padder-v text-muted">
+      <i class="icon-link block m-b-xs fa-2x"></i>
+      <span>Website</span>
+    </a>
+  </div>
+</ox-card>

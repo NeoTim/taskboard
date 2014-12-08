@@ -1,0 +1,27 @@
+<div class="container top">
+  <div class="row">
+    <section class="col-md-12 panel">
+      <div class="row">
+        <h1 class="panel-heading color-blue-400" text-white>
+          Pipes
+          <a
+             class="btn btn-clear pull-right"
+             ui-sref="pipes-create"
+             y-icon='plus'></a>
+        </h1>
+        <ul class="list-group">
+          <li
+              ng-repeat="pipe in vm.pipes"
+              ui-sref="pipes-detail({pipeId: pipe._id})"
+              point
+              class="list-group-item">
+              <p>
+                {{pipe.title}}
+              </p>
+
+          </li>
+        </ul>
+        </div>
+    </section>
+  </div>
+</div>

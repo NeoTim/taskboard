@@ -1,0 +1,29 @@
+<div class="flex-row">
+  <div class="flex-md">
+
+    <div class="y-side-nav" ng-class="{
+      'folded': app.settings.aside.left.fold,
+      'hidden':app.settings.aside.left.hide
+      }">
+    <!-- <div class="" style="position:fixed; width:256px; height:100px; background:white; top:0; left:0;"> -->
+
+      <!-- <div class="y-side-toolbar" color="{{color}}">
+        <span class="title">{{title}}</span>
+        <button class="side-lock btn y-tool" ng-show="app.settings.aside.left.fold"
+                ui-sref="lock">
+          <i class="icon-power fa-fw"></i>
+        </button>
+      </div> -->
+
+      <div class="y-side-header" ng-hide="app.settings.aside.left.fold">
+        <div
+              ng-include="'app/modules/y-modules/directives/ySideNav/ySideNav.directive.user.html'"
+              ng-show="app.user.aside"
+              class="clearfix hidden-xs text-center"
+              id="aside-user">
+        </div>
+      </div>
+      <div class="y-side-content" ng-transclude></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<nav class="y-toolbar" ng-class="{ 'y-paper': toolbar.paper, 'y-tall': toolbar.tall,  'y-ink': toolbar.ink, 'y-short': toolbar.short}" color="indigo-500">
+  <y-flex-box>
+    <div class="y-toolbar-header" ui-sref="home.features" point>
+      {{toolbar.title}}
+    </div>
+    <div class="y-tools y-tools-left">
+      <button class="btn y-tool"
+              ng-click="app.settings.aside.left.fold = !app.settings.aside.left.fold" y-icon="align-justify">
+      </button>
+      <button class="btn y-tool" ng-hide="app.settings.aside.left.fold"
+              ui-sref="lock">
+        <i class="icon-power fa-fw"></i>
+      </button>
+      <!-- <button class="btn y-tool dropdown pos-stc">
+        <a href class="dropdown-toggle">
+          <span>Mega</span>
+          <span class="caret"></span>
+        </a>
+        <div
+              ng-include="'app/modules/y-modules/directives/yToolbar/y-toolbar.directive.mega.html'"
+              class="dropdown-menu wrapper w-full bg-white"></div>
+      </button> -->
+    </div>
+    <div class="y-tools y-tools-right">
+      <button class="btn y-tool hidden-xs">
+        <a ui-fullscreen></a>
+      </button>
+      <button class="btn y-tool dropdown">
+        <a href class="dropdown-toggle">
+          <i class="icon-bell fa-fw"></i>
+          <span class="visible-xs-inline">Notifications</span>
+          <span class="badge badge-sm up bg-danger pull-right-xs">2</span>
+        </a>
+        <div
+             ng-include="'app/modules/y-modules/directives/yToolbar/y-toolbar.directive.notifications.html'"
+             class="dropdown-menu dropdown-right w-xl animated fadeInUp"></div>
+      </button>
+      <button class="btn y-tool dropdown">
+        <a href class="dropdown-toggle clear" data-toggle="dropdown">
+          <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+            <img src="img/a0.jpg" alt="...">
+            <i class="on md b-white bottom"></i>
+          </span>
+          <span class="hidden-sm hidden-md">John.Smith</span> <b class="caret"></b>
+        </a>
+        <ul
+            ng-include="'app/modules/y-modules/directives/yToolbar/y-toolbar.directive.user.html'"
+            class="dropdown-menu dropdown-right animated fadeInRight w"></ul>
+      </button>
+      <!-- <button class="btn y-tool">
+        <i class="icon-magnifier fa-fw"></i>
+      </button>
+      <button class="btn y-tool" ui-sref="home.features" y-icon="dashboard">
+
+      </button>
+        <button class="btn y-tool" ui-sref="signin" y-icon="user">
+
+      </button> -->
+    </div>
+  </y-flex-box>
+
+  <div class="y-sub-header">
+    <div class="y-sub-header-action">
+    <p></p>
+    </div>
+    <div class="y-sub-heading">
+      slush-y
+    </div>
+  </div>
+</nav>

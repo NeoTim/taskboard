@@ -1,0 +1,64 @@
+
+body
+  &.toolbar-fixed
+    padding-top $toolbar-height
+
+.ox-toolbar
+  height $toolbar-height
+  z-index 2010
+  width 100%
+
+  &.toolbar-fixed
+    position fixed
+    top 0
+    left 0
+
+  &.toolbar-short
+    height $toolbar-short-height
+
+  &.toolbar-tall
+    height $toolbar-tall-height
+
+  &.toolbar-paper
+    shadow-bottom-z-1()
+
+  &.toolbar-ink
+    box-shadow none
+    -webkit-box-shadow none
+
+  &.primary
+    background-color $color-primary
+    background $color-primary
+    color $color-light-text
+
+  .ox-toolbar-header
+    height $ox-aside-height
+    width $ox-aside-width
+    font-size 1.6em
+    line-height 2.6em
+    font-weight bold
+    text-align center
+    padding-left 20px
+    ox-flexer($ox-aside-width)
+    // ox-flexer-position(first)
+
+  .ox-tool
+    height $toolbar-height
+
+  .toolbar-left
+    ox-flexer()
+    text-align left
+
+
+
+  .toolbar-right
+    ox-flexer()
+    ox-flexer-end()
+    ox-flexer-middle()
+    padding-right 10px
+
+
+
+
+
+

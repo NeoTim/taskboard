@@ -1,0 +1,19 @@
+
+<div class="cell scrollable hover">
+  <div class="cell-inner">
+    <div class="m-t-n-xxs">
+      <div class="list-group list-group-lg no-radius no-border no-bg m-b-none">
+        <a ng-repeat="item in vm.contacts | filter:{group:filter} | filter:query | orderBy:'first'"
+           class="list-group-item m-l"
+           ng-class="{'select m-l-none': item.selected }"
+           ui-sref="app.contacts.list.detail({contactId:item._id})">
+          <span class="block text-ellipsis m-l-n text-md" ng-class="{'m-l-none': item.selected }">
+            {{ item.first }} <strong>{{ item.last }}</strong>
+            <span ng-hide="item.first || item.last">No Name</span>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="text-center pos-abt w-full" style="top:50%;" ng-hide="(vm.contacts | filter:{group:filter} | filter:query).length">No Contacts</div>
+  </div>
+</div>

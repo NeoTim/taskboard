@@ -1,0 +1,26 @@
+
+
+<!-- <div class="flex-md bg-light b-r no-pad-r"> -->
+  <ox-columns>
+    <div class="list-group-item no-bg no-border b-b"  ng-class="{'focus': (filter == '')}">Streams
+    </div>
+    <ox-item
+        class="no-bg no-border text-left"
+        data-ng-repeat="item in vm.streams"
+        ui-sref="app.streams.detail({id:item._id})"
+        ng-dblclick="item.editing = true">
+
+      <span ng-click='vm.deleteStream(item)'
+            class="pull-right text-muted hover-action"><i class="fa fa-times"></i></span>
+      <span class="block m-l-n"
+            ng-class="{'m-n': item.selected }">{{ item.title ? item.title : 'Untitled' }}</span>
+      <input type="text"
+             class="form-control pos-abt"
+             ng-show="item.editing"
+             ng-blur="item.editing=false; item.save()"
+             ng-model="item.title"
+             style="top:3px;left:2px;width:98%"
+             ui-focus="item.editing">
+    </ox-item>
+
+  </ox-columns>

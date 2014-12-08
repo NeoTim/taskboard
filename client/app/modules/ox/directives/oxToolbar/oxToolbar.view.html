@@ -1,0 +1,15 @@
+<nav class="ox-toolbar {{toolbar.color}}"
+     ng-class="{
+      'toolbar-paper': toolbar.paper,
+      'toolbar-tall': toolbar.tall,
+      'toolbar-ink': toolbar.ink,
+      'toolbar-short': toolbar.short,
+      'toolbar-fixed': toolbar.fixed
+      }">
+
+  <section class="flex-row between">
+    <div class="ox-toolbar-header" ui-sref="app.dashboard-v1" point>
+      {{toolbar.title}}
+    </div>
+  </section>
+</nav>

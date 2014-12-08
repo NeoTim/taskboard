@@ -1,0 +1,58 @@
+<div class="hbox hbox-auto-xs hbox-auto-sm">
+  <div class="col">
+
+    <!-- <div data-ng-include="'app/modules/profile/views/partials/header.html'"></div> -->
+
+
+    <div class="wrapper bg-white b-b">
+      <ul class="nav nav-pills nav-sm">
+        <li class="btn-accent"><a href>Stream</a></li>
+        <li><a href>Profile</a></li>
+        <li><a href>Messages</a></li>
+      </ul>
+      <button
+          ng-click="vm.create()"
+          class="pull-right btn btn-rounded shadow btn-xl btn-info btn-icon"
+          style="margin-top:-20px;"
+          y-icon="plus">
+      </button>
+
+    </div>
+
+
+
+    <div class="padder">
+      <div class="streamline b-l b-accent m-l-lg m-b padder-v">
+        <y-flex>
+          <div class="f-row">
+            <div gridster="gridsterOpts" title="{{item.title}}">
+                     <!-- title="item.title" -->
+
+                    <y-portlet arrow=true
+                               ng-repeat="item in customItems track by $index"
+                               class="m-l-xxl panel b-a">
+
+                        <div class="f-md-12">
+                        <div class="form-group">
+                        <label id="me" class="control-label" ng-model="me" ng-mousedown="preventMe()" ng-click="focusin=true">
+                            <textarea ng-focus="focusin" autofocus="true" name="content" class="form-control msd-elastic" style='width:100%;' ng-model="item.content"></textarea>
+                        </label>
+                        </div>
+                        </div>
+                    </y-portlet>
+            </div>
+          </div>
+        </y-flex>
+
+      </div>
+    </div>
+
+  </div>
+
+       <!-- data-ng-include="'app/modules/profile/views/partials/sidebar.html'" -->
+  <!-- <div class="col w-lg bg-light lter b-l bg-auto">
+
+  </div> -->
+
+
+</div>

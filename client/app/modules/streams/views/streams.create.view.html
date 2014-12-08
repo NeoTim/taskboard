@@ -1,0 +1,99 @@
+<div class="col w-lg bg-light dk b-r bg-auto" id="aside">
+    <div class="wrapper bg b-b">
+      <button class="btn btn-sm btn-success pull-right" ui-toggle-class="timeline-center" target=".timeline">Center</button>
+      <h3 class="m-n font-thin">Timeline</h3>
+    </div>
+    <div class="wrapper">
+      <form>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" placeholder="Event name" class="input-sm form-control">
+        </div>
+        <div class="form-group">
+          <label>Date</label>
+          <input type="text" placeholder="Event name" class="input-sm form-control">
+        </div>
+        <div class="form-group">
+          <label>Time</label>
+          <input type="text" placeholder="eg. 3:00 pm" class="input-sm form-control">
+        </div>
+        <div class="form-group">
+          <label>Type</label>
+          <div>
+            <div class="btn-group dropdown">
+              <button data-toggle="dropdown" class="btn btn-sm btn-default dropdown-toggle">
+                <span class="dropdown-label">Choose a type</span>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href>Travel</a></li>
+                <li><a href>Phone</a></li>
+                <li><a href>Meeting</a></li>
+                <li><a href>Appointment</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="m-t-md m-b-md"><button class="btn btn-sm btn-primary">Add an event</button></div>
+      </form>
+    </div>
+  </div>
+
+<!-- <div class="flex-row">
+    <section class="flex-md">
+      <div class="panel">
+        <h1 class="panel-heading">
+          New Stream
+        </h1>
+        <article class="panel-body">
+          <form data-ng-submit="vm.create()" novalidate>
+
+              <div class="form-group">
+                <label class="control-label" for="title">
+                  Title
+                </label>
+                  <input
+                        type="text"
+                        data-ng-model="vm.newStream.title"
+                        id="title"
+                        class="form-control primary"
+                        placeholder="Title"
+                        required>
+              </div>
+              <div class="form-group">
+                <label class='control-label' for="type">Type</label>
+                <select class="form-control" placeholder="Type of Stream" ng-model="vm.newString.type">
+                  <option value="stream">Pipe</option>
+                  <option value="stream">Event</option>
+                  <option value="stream">Location</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label" for="content">Content</label>
+                  <textarea
+                        data-ng-model="vm.newStream.content"
+                        id="content"
+                        class="form-control primary"
+                        placeholder="Content"
+                        required
+                        cols="30" rows="10" wrap="hard"
+                        ></textarea>
+              </div>
+              <hr>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Done</button>
+                <a
+                  class="btn btn-white pull-right"
+                  y-icon='close'
+                  data-ui-sref="streams"
+                  ></a>
+              </div>
+              <div data-ng-show="error" class="text-danger">
+                <strong>{{error}}</strong>
+              </div>
+          </form>
+        </article>
+      </div>
+    </section>
+</div> -->

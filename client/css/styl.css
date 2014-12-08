@@ -1,0 +1,129 @@
+.box-shadow-2-4 {
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
+}
+body .overlay {
+  position: fixed;
+  z-index: 60000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.ftm {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+.fbm {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+.frm {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.flm {
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.fixed-r-b {
+  position: fixed;
+  right: 50px;
+  bottom: 100px;
+}
+.abs-r-b {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+.btn-rounded {
+  transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+}
+.btn-rounded.shadow {
+  box-shadow: 1px 3px 6px rgba(0,0,0,0.4);
+  -webkit-box-shadow: 1px 3px 6px rgba(0,0,0,0.4);
+}
+.btn-rounded:hover {
+  box-shadow: 3px 6px 10px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 3px 6px 10px rgba(0,0,0,0.3);
+}
+.btn-rounded.btn-xl {
+  z-index: 20000;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  font-size: 1.5em;
+  line-height: 70px;
+}
+.btn-white {
+  background-color: #fff;
+  background: #fff;
+}
+.dropleft .dropdown-menu {
+  left: -150px;
+}
+/*
+.y-button-sheet {
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 60001;
+  height: 200px;
+  background-color: #fff;
+  background: #fff;
+  text-align: center;
+}
+.y-button-sheet-tool {
+  width: 150px;
+  margin: 0 auto;
+  display: inline-block;
+}
+.y-button-sheet-tool .btn {
+  padding: 20px;
+  height: 120px;
+  width: 120px;
+  text-align: center;
+}
+.y-button-sheet-tool .btn i {
+  font-size: 3em;
+  padding-bottom: 10px;
+}
+.y-portlet {
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
+  background-color: #fff;
+}
+.y-portlet .panel-heading .action {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+.y-portlet .panel-body {
+  height: 60%;
+}
+.y-portlet .panel-footer {
+  position: relative;
+}
+.y-portlet .panel-footer .action {
+  position: absolute;
+  right: 8%;
+  bottom: 10%;
+}
+.y-portlet .tools {
+  min-width: 50%;
+}
+.y-portlet .tools.left {
+  float: left;
+}
+.y-portlet .tools.right {
+  float: right;
+  text-align: right;
+}
+*/

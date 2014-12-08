@@ -1,0 +1,27 @@
+<div class="flex-row">
+  <div class="flex-md">
+    <section class="col-md-12 panel">
+      <div class="row">
+        <h1 class="panel-heading color-blue-400" text-white>
+          Contacts
+          <a
+             class="btn btn-clear pull-right"
+             ui-sref="contacts-create"
+             y-icon='plus'></a>
+        </h1>
+        <ul class="list-group">
+          <li
+              ng-repeat="contact in vm.contacts"
+              ui-sref="contacts-detail({contactId: contact._id})"
+              point
+              class="list-group-item">
+              <p>
+                {{contact.title}}
+              </p>
+
+          </li>
+        </ul>
+        </div>
+    </section>
+  </div>
+</div>

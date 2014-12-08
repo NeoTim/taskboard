@@ -1,0 +1,19 @@
+<ox-sidebar
+    ng-class="{
+      'folded': app.settings.aside.left.fold,
+      'hidden':app.settings.aside.left.hide,
+      'on-top':app.settings.aside.left.onTop,
+      'on-bottom':app.settings.aside.left.onBottom,
+      'ox-toolbar-fixed':app.settings.aside.left.fixed}">
+
+  <sidebar-header
+    ng-hide="app.settings.aside.left.fold">
+    <div
+        class="hidden-xs text-center"
+        data-ng-include="'app/core/views/sidebar.header.html'"
+        ></div>
+  </sidebar-header>
+  <sidebar-content
+      data-ng-include="'app/core/views/aside-left.view.html'">
+  </sidebar-content>
+</ox-sidebar>

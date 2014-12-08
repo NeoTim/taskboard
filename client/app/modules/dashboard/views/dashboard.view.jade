@@ -1,0 +1,21 @@
+div.bg-light.lter.b-b.wrapper-md
+  h1.m-n.font-thin.h3 Widgets
+
+.flex-row.wrapper
+
+  .flex-md-4
+    div(data-ng-include="'templates/widgets.restaurants.html'")
+
+  .flex-md-8
+    .flex-row
+      .flex-md-6
+        div(data-ng-include="'templates/widgets.user.html'")
+      .flex-md-6
+        div(data-ng-include="'templates/widgets.memberstats.html'")
+
+button.fixed-r-b.btn.btn-rounded.shadow.btn-xl.btn-icon.btn-info.lt.m-r-xl.m-t-xl(ng-click="showActions=!showActions")
+    y-toggle-button-sheet(ripl)
+      i.fa.fa-plus
+button.fixed-r-b.btn.btn-rounded.shadow.btn-lg.btn-icon.btn-white.lt.m-r-xl.m-t-xl(style="right:120px;" ng-show="showActions")
+    y-toggle-button-sheet(ripl)
+      i.fa.fa-plus

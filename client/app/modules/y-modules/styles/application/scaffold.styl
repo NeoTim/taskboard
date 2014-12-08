@@ -1,0 +1,84 @@
+wrapper()
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+.application
+  // flex-verticle()
+  size 100%
+
+
+  .application-header
+    app-build-header()
+
+  .application-container
+    size 100%
+    // flex-defaults()
+    // height calc(100% - 64px)
+    // -webkit-flex 2
+    //         flex 2
+
+
+
+  .application-aside-left
+    // size 100%
+
+    width $application-aside-width
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    max-width: $application-aside-width
+
+    box-shadow 2px 0 4px rgba(0,0,0,.3)
+    -webkit-box-shadow 2px 0 4px rgba(0,0,0,.3)
+    &.on-bottom
+      box-shadow inset -2px 0 4px rgba(0,0,0,.3)
+      -webkit-box-shadow inset -2px 0 4px rgba(0,0,0,.3)
+    // app-aside-left()
+
+
+
+  &.application-aside-left-fold
+    .application-aside-left
+      max-width: $application-aside-fold-width
+
+.application-content
+
+  // app-build-content()
+  // -webkit-flex 1
+  // flex 1
+
+.application-inner-content
+  // size 100%
+  // display flex
+  // display -webkit-flex
+  // overflow scroll
+  // flex 1
+
+.application-aside-right
+  app-aside-right()
+
+
+.application-footer
+  app-build-footer()
+
+
+.application
+  &.application-aside-left-fold
+
+    .application-aside-left
+      .hidden-folded,
+      span
+        display none !important
+
+      app-aside-left-fold()
+
+

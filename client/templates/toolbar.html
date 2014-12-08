@@ -1,0 +1,39 @@
+<ox-toolbar color="primary">
+  <toolbar-left>
+    <ox-tool
+        fa-icon="align-justify"
+        ng-click="app.settings.aside.left.fold = !app.settings.aside.left.fold">
+    </ox-tool>
+    <ox-tool
+            icon-icon="power"
+            ng-hide="app.settings.aside.left.fold"
+            ui-sref="lock">
+    </ox-tool>
+  </toolbar-left>
+  <toolbar-right>
+    <ox-tool>
+        <a ui-fullscreen></a>
+    </ox-tool>
+    <ox-tool dropdown>
+      <a href class="dropdown-toggle">
+        <i class="icon-bell fa-fw"></i>
+        <span class="badge badge-sm up bg-danger pull-right-xs">2</span>
+      </a>
+      <div
+           ng-include="'app/modules/y-modules/directives/yToolbar/y-toolbar.directive.notifications.html'"
+           class="dropdown-menu dropdown-right w-xl animated fadeInUp"></div>
+    </ox-tool>
+    <ox-tool dropdown>
+      <a href class="dropdown-toggle clear" data-toggle="dropdown">
+        <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+          <img src="img/a0.jpg" alt="...">
+          <i class="on md b-white bottom"></i>
+        </span>
+        <span class="hidden-sm hidden-md">John.Smith</span> <b class="caret"></b>
+      </a>
+      <ul
+          ng-include="'app/modules/y-modules/directives/yToolbar/y-toolbar.directive.user.html'"
+          class="dropdown-menu dropdown-right animated fadeInRight w"></ul>
+    </ox-tool>
+  </toolbar-right>
+</ox-toolbar>

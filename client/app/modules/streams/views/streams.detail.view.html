@@ -1,0 +1,65 @@
+<div class="ox-flexer horizontal bg-white">
+  <div class="ox-flex-md wrapper">
+    <div class="flex-row">
+      <div class="flex-md-8">
+        <p class="text-mute h3 text-left">{{vm.stream.title}}</p>
+      </div>
+      <div class="ox-flex-md-4 align-end" style="position:relative;">
+        <button
+            ng-click="vm.createContact()"
+            class="pull-right btn btn-rounded shadow btn-xl m-r-lg btn-pink-A200 btn-icon text-white"
+            style="right:170px; margin-bottom:-100%; position:absolute;"
+            y-icon="user">
+        </button>
+        <button
+            ng-click="vm.createLocation()"
+            class="pull-right btn btn-rounded shadow btn-xl m-r-lg btn-primary btn-icon"
+            style="right:90px; margin-bottom:-100%; position:absolute;"
+            y-icon="location-arrow">
+        </button>
+        <button
+            ng-click="vm.createPipe()"
+            class="pull-right btn btn-rounded shadow btn-xl m-r-lg btn-info btn-icon"
+            style="right:15px; margin-bottom:-100%; position:absolute;"
+            y-icon="plus">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ox-flexer horizontal">
+  <div class="ox-flex-md">
+    <div class="padder">
+      <div class="streamline b-l b-accent m-l-lg m-b padder-v">
+
+        <y-flex>
+          <div class="f-row">
+            <div gridster="vm.config.options">
+
+              <div ng-repeat="item in vm.pipes track by $index">
+                <y-stream ng-if="item.type == 'pipe'"
+                    gridster-item="vm.config.map"
+                    title="{{item.title}}"
+                    item="item">
+                </y-stream>
+                <stream-location ng-if="item.type === 'location'"
+                    gridster-item="vm.config.map"
+                    title="{{item.title}}"
+                    location="item">
+                  </stream-location>
+                <stream-contact ng-if="item.type === 'contact'"
+                    gridster-item="vm.config.map"
+                    title="{{item.title}}"
+                    contact="item">
+                  </stream-contact>
+              </div>
+
+
+            </div>
+          </div>
+        </y-flex>
+
+      </div>
+    </div>
+  </div>
+</div>

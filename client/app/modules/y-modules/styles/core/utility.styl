@@ -1,0 +1,20 @@
+$integers = 5 10 16 20 24 30 40 50 60 70 80 90 100 120 140 160 180 200
+$sides    = top right bottom left
+$font-sizes = 1em 1.6em 2em 2.5em 3em
+$font-labels = xs sm md lg xl
+$size-labels = xs sm md lg xl
+
+
+create-moves(int)
+  .left-{int}
+    left unit(int, px)
+  .right-{int}
+    right unit(int, px)
+  .top-{int}
+    top unit(int, px)
+  .bottom-{int}
+    bottom unit(int, px)
+
+for int in $integers
+  create-moves(int)
+

@@ -1,0 +1,17 @@
+{
+  "store": {
+    "githubPublished": true,
+    "npmPublished": true,
+    "travisTested": false,
+    "appName": "taskboard",
+    "appDescription": "",
+    "appVersion": "0.1.0",
+    "authorName": "joelcoxokc",
+    "authorEmail": "joelcox@hisimagination.com",
+    "userName": "joelcoxokc",
+    "appNameSlug": "taskboard",
+    "appNameJs": "taskboard",
+    "year": 2014,
+    "date": "2014-11-3"
+  }
+}

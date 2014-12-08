@@ -1,0 +1,42 @@
+<div class="m-l-xxl panel b-a y-stream">
+
+  <span class="arrow left pull-up"></span>
+  <header class="y-stream-header">
+    <div class="flex-row">
+      <div class="flex-xs-6 m-b-md">
+        <input autofocus="true"
+               style="width:80%; outline:none; padding:7px;"
+               ng-model='item.title' ng-blur="item.save()" />
+      </div>
+      <div class="flex-xs-5">
+        <p class="text-mute m-t-sm">{{time}}</p>
+      </div>
+      <div class="tools flex-xs-1">
+        <div class="pull-right btn-group dropdown dropleft" style="padding-right:10px; padding-top:8px;">
+          <!-- <button class="btn no-shadow btn-xs btn-white lt"><i class="fa fa-plus"></i></button> -->
+          <button class="pull-right btn no-shadow btn-xs btn-white lt dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
+          <ul class="dropdown-menu" style="z-index:10000;">
+            <li><a href>Action</a></li>
+            <li><a href>Another action</a></li>
+            <li><a href>Something else here</a></li>
+            <li class="divider"></li>
+            <li><a ng-click="item.remove()" href> <i class="fa fa-trash-o"></i> </a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="flex-md-12 y-stream-body">
+    <div class="form-group">
+      <label id="me" class="control-label" ng-mousedown="preventMe()">
+          <textarea ng-focus="focusin"
+                    autofocus="true"
+                    name="content"
+                    class="form-control no-border no-bg msd-elastic"
+                    style='width:100%;'
+                    ng-model="item.text"></textarea>
+      </label>
+    </div>
+  </section>
+</div>

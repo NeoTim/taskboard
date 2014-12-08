@@ -1,0 +1,129 @@
+
+<!-- <div class="flex-row">
+  <div  class="flex-xs application-header"
+        data-ng-include=" 'app/core/views/header.view.html'">
+  </div>
+</div> -->
+<ox-toolbar color="primary" paper=true>
+  <toolbar-left>
+    <ox-tool
+        fa-icon="align-justify"
+        ng-click="app.settings.aside.left.fold = !app.settings.aside.left.fold">
+    </ox-tool>
+    <ox-tool
+            icon-icon="power"
+            ng-hide="app.settings.aside.left.fold"
+            ui-sref="lock">
+    </ox-tool>
+  </toolbar-left>
+  <toolbar-right>
+    <ox-tool>
+        <a ui-fullscreen></a>
+    </ox-tool>
+    <ox-tool dropdown>
+      <a href class="dropdown-toggle">
+        <i class="icon-bell fa-fw"></i>
+        <span class="badge badge-sm up bg-danger pull-right-xs">2</span>
+      </a>
+      <div
+           ng-include="'app/modules/y-modules/directives/yToolbar/y-toolbar.directive.notifications.html'"
+           class="dropdown-menu dropdown-right w-xl animated fadeInUp"></div>
+    </ox-tool>
+    <ox-tool dropdown>
+      <a href class="dropdown-toggle clear" data-toggle="dropdown">
+        <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+          <img src="img/a0.jpg" alt="...">
+          <i class="on md b-white bottom"></i>
+        </span>
+        <span class="hidden-sm hidden-md">John.Smith</span> <b class="caret"></b>
+      </a>
+      <ul
+          ng-include="'app/modules/y-modules/directives/yToolbar/y-toolbar.directive.user.html'"
+          class="dropdown-menu dropdown-right animated fadeInRight w"></ul>
+    </ox-tool>
+  </toolbar-right>
+</ox-toolbar>
+<ox-dashboard-container>
+
+  <ox-sidebar sidebar-left>
+
+    <sidebar-header
+          id="aside-user" class="hidden-xs text-center"
+          data-ng-include="'app/core/views/sidebar.header.html'"
+          ng-show="app.user.aside">
+    </sidebar-header>
+    <sidebar-content
+        data-ng-include="'app/core/views/aside-left.view.html'">
+    </sidebar-content>
+
+  </ox-sidebar>
+
+  <ox-dashboard-view></ox-dashboard-view>
+
+  <!-- <ox-sidebar sidebar-left></ox-sidebar> -->
+
+</ox-dashboard-container>
+
+     <!--  <div          data-ng-incl
+
+          ng-show="app.user.aside"
+         iv> id="aside-user"
+              data-ng-" 'tpl/blocks/settings.html' "
+          class="clearfix hidden-xs text-center"
+            class="settings panel panel-default"
+          <div
+          data-ng-class="{'active':app.settings.showSettings}"
+          ></div> -->
+
+
+
+<!--
+  <div  class="application-header"
+        data-ng-include=" 'app/core/views/header.view.html'">
+  </div>
+
+  <div class="application-container">
+
+    <div
+        class="application-aside-left hidden-xs {{app.settings.asideColor}}"
+         data-ng-include="'app/core/views/aside-left.view.html'"
+         ></div>
+
+    <div class="application-content">
+      <div ui-butterbar></div>
+      <a  href
+          class="off-screen-toggle hide" ui-toggle-class="off-screen" data-target=".app-aside" ></a>
+      <div class="fade-in-up application-inner-content" ui-view></div>
+    </div>
+
+  </div>
+      <div
+          data-ng-include=" 'tpl/blocks/settings.html' "
+          class="settings panel panel-default"
+          data-ng-class="{'active':app.settings.showSettings}"
+          ></div>
+
+ -->
+
+
+
+
+    <!-- navbar
+   data-ng-include=" 'app/core/views/header.view.html' " class="application-header">
+     <div data-ng-include=" 'tpl/blocks/header.html' " class="app-header navbar">
+  </div> -->
+
+    <!-- <div data-ng-include=" 'tpl/blocks/aside.html' " class="app-aside hidden-xs {{app.settings.asideColor}}">
+    </div> -->
+
+      <!-- <div ui-butterbar></div> -->
+      <!-- <a href class="off-screen-toggle hide" ui-toggle-class="off-screen" data-target=".app-aside" ></a> -->
+      <!-- <div class="app-content-body fade-in-up" ui-view></div> -->
+
+
+    <!-- <div
+        data-ng-include="'app/core/views/aside-right.view.html'"
+        class="app-aside-right pos-fix no-padder w-md w-auto-xs bg-white b-l animated fadeInRight hide">
+    </div> -->
+
+

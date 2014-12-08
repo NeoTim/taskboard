@@ -1,0 +1,44 @@
+// [class~='flex-']
+
+flex-defaults()
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+
+flex-flow-row()
+  flex-defaults()
+  -webkit-flex-flow row
+          flex-flow row
+
+
+.flex
+  flex-defaults()
+  size 100%
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+.flex-verticle
+  flex-defaults()
+  size 100%
+  -webkit-flex-direction: column;
+  flex-direction: column;
+
+.flex-align-middle
+  flex-defaults()
+  -webkit-flex-direction row /* works with row or column */
+  flex-direction row
+  -webkit-align-items center
+  // align-items center
+
+.row
+  flex-flow-row()
